@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: hello-dark-world-httpd
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels: # labels to select/identify the deployment
-        app: hello-world  
+        app: hello-dark-world-httpd  
     spec:     # pod spec                  
       containers: 
-      - name: hello-world 
-        image: gcr.io/phineasrt/hello-world-image:v1 # image we pushed
+      - name: hello-dark-world-httpd 
+        image: alchen99/express-hello-world:alpine-httpd-black # image we pushed
         ports:
-        - containerPort: 3000
+        - containerPort: 80
