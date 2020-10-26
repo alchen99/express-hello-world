@@ -1,0 +1,22 @@
+#cloud-config
+repo_update: true
+repo_upgrade: all
+
+packages:
+ - curl
+ - golang
+ - httpie
+ - jq
+ - make
+ - screen
+ - tmux
+ - tree
+ - unzip
+ - vim
+ - wget
+
+runcmd:
+ - id
+ - curl -s https://get.helm.sh/helm-v2.16.9-linux-amd64.tar.gz | tar xvfz - -C /var/tmp && mv /var/tmp/linux-amd64/helm /usr/local/bin/helm2 && ln -s /usr/local/bin/helm2 /usr/local/bin/helm && rm -rf /var/tmp/linux-amd64
+ - curl -s https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz | tar xvfz - -C /var/tmp && mv /var/tmp/linux-amd64/helm /usr/local/bin/helm3 && rm -rf /var/tmp/linux-amd64
+ - chown root:root /usr/local/bin/helm3
