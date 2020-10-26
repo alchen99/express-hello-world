@@ -4,10 +4,8 @@ repo_upgrade: all
 
 packages:
  - curl
- - golang
  - httpie
  - jq
- - make
  - screen
  - tmux
  - tree
