@@ -6,6 +6,7 @@ packages:
  - curl
  - httpie
  - jq
+ - make
  - screen
  - tmux
  - tree
