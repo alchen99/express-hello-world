@@ -1,8 +1,18 @@
-var express = require('express')
-var app = express()
+'use strict';
+
+// [START gae_node_request_example]
+const express = require('express');
+
+const app = express();
 
 app.use(express.static(__dirname + '/www'));
 
-app.listen(3000, function () {
-  console.log('Listening on port 3000...')
-})
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
+// [END gae_node_request_example]
+
+module.exports = app;
