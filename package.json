@@ -7,6 +7,10 @@
     "express",
     "hello-world"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alchen99/express-hello-world.git"
+  },
   "engines": {
     "node": ">=12.0.0"
   },
