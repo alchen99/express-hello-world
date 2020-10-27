@@ -11,6 +11,6 @@ spec:
     spec:     # pod spec                  
       containers: 
       - name: hello-world 
-        image: gcr.io/phineasrt/hello-world-image:v1 # image we pushed
+        image: alchen99/express-hello:latest # image we pushed
         ports:
         - containerPort: 3000
